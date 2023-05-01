@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Visszaszámláló</title>
+  <style>
+    .countdown {
+      font-size: 48px;
+      font-weight: bold;
+      text-align: center;
+      margin-top: 200px;
+    }
+  </style>
+</head>
+<body>
+  <div class="countdown" id="countdown"></div>
+
+  <script>
+    var countdownElement = document.getElementById('countdown');
+    var seconds = 600;
+
+    function countdown() {
+      countdownElement.innerHTML = seconds;
+
+      if (seconds > 0) {
+        seconds--;
+        setTimeout(countdown, 1000);
+      }
+    }
+
+    countdown();
+  </script>
+</body>
+</html>
